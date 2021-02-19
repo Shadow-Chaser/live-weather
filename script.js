@@ -1,4 +1,5 @@
 const apiKey = '4384136ca82f5059368a170068aff92d';
+const searchBtn = document.getElementById('search-button');
 
 const getWeather = (city) =>{
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
@@ -16,15 +17,15 @@ const showWeather = (data) =>{
 
 }
 
+getWeather("Dhaka");
 
 
-document.getElementById('search-input')
+document.getElementById("search-input")
     .addEventListener("keypress", function(event){
         if(event.key == 'Enter'){
-            document.getElementById('search-btn').click();
+            searchBtn.click();
             
         }
 
     });
 
-getWeather("Dhaka");
